@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->Longtext('description')->nullable();
-            $table->date('opening');
-            $table->date('closing');
-            $table->enum('status', ['opening', 'in_progress', 'completed'])->default('opening');
+            $table->string('name');
+            $table->string('email');
+            $table->string('password');
+            $table->enum ('role', ['admin', 'user'])->default('user');
             $table->timestamps();
         });
     }
