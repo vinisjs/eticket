@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Client;
 
 class ClientSeeder extends Seeder
 {
@@ -13,11 +13,18 @@ class ClientSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('clients')->insert([
-            'name' => 'John Doe',
-            'email' => 'John@example.com',
-            'password' => bcrypt('root'),
-            'role' => 'admin'
+        Client::create([
+            'name' => 'Pedro',
+            'email' => 'pedro@example.com',
+            'password' => Hash::make('root'),
+            'role' => 'admin',
+        ]);
+
+        Client::create([
+            'name' => 'Vinicius',
+            'email' => 'vinicius@example.com',
+            'password' => Hash::make('123456'),
+            'role' => 'user',
         ]);
     }
 }
