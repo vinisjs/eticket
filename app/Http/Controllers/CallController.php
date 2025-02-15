@@ -13,7 +13,7 @@ class CallController extends Controller
     public function index()
     {
         $calls = Call::all();
-        return response()->json($calls);
+        return view('calls.index', compact('calls')); 
     }
 
     /**
@@ -21,7 +21,7 @@ class CallController extends Controller
      */
     public function create()
     {
-        //
+        return view('calls.create');
     }
 
     /**
@@ -51,7 +51,8 @@ class CallController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $call = Call::findOrFail($id);
+        return view('calls.show', compact('call'));
     }
 
     /**
@@ -59,7 +60,8 @@ class CallController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $call = Call::findOrFail($id);
+        return view('calls.edit', compact('call'));
     }
 
     /**
@@ -67,7 +69,21 @@ class CallController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'client_id' => 'required|exists:clients,id',
+        ]);
+
+        $call = Call::findOrFail($id);
+        $call->update([
+            'title' => $validated['title'],
+            'description' => $validated['description'],
+            'client_id' => $validated['client_id'],
+            'status' => 'open',
+        ]);        
+
+        return response()->json($call, 200);
     }
 
     /**
@@ -75,6 +91,8 @@ class CallController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $call = Call::findOrFail($id);
+        $call->delete();
+        return response()->json(null, 204);
     }
 }
