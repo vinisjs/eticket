@@ -3,9 +3,24 @@
 @section('title', 'Página Inicial')
 
 @section('content')
-    <h2 class="text-2xl font-semibold">Bem-vindo à Página Inicial</h2>
-    <p class="mt-2 text-gray-700">Este é um exemplo de página usando Tailwind no Laravel.</p>
-    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
-        Clique aqui
-    </button>
+<div class="container mt-5">
+    <h1 class="text-primary">Bootstrap instalado com sucesso! 🚀</h1>
+    <button class="btn ">Botão de teste</button>
+</div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 0%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 50%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 75%"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 100%"></div>
+  </div>
+
 @endsection

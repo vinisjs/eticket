@@ -7,25 +7,36 @@
     <title>@yield('title', 'Meu Site')</title>
 
     <!-- Importando Tailwind com Vite -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="">
+    
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
 
-    <!-- Cabeçalho -->
-    <header class="bg-blue-600 text-white p-4">
-        <h1 class="text-xl font-bold">Meu Site</h1>
-    </header>
-
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    
     <!-- Conteúdo da Página -->
-    <main class="container mx-auto p-4">
+    <main class="">
         @yield('content')
     </main>
-
-    <!-- Rodapé -->
-    <footer class="bg-gray-800 text-white text-center p-2 mt-4">
-        <p>&copy; {{ date('Y') }} Meu Site</p>
-    </footer>
-
+    
+    
+    @vite(['resources/js/app.js'])
 </body>
 </html>
