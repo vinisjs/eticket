@@ -1,66 +1,141 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistema de Suporte - E-ticket
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Sobre
 
-## About Laravel
+Esse é um projeto final da matéria de Framework 1 do curso superior em Análise de Sistemas no Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### Objetivos
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Os alunos deverão desenvolver uma aplicação CRUD (Create, Read, Update, Delete) utilizando Laravel 11. O sistema deve ser desenvolvido em duplas e implementar as operações essenciais de inserção, edição, remoção e listagem de dados. Além disso, será necessário incluir relatórios que apresentem informações relevantes sobre os registros armazenados.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Requisitos obrigatórios:**
 
-## Learning Laravel
+-   **CRUD Completo:** Implementação das funcionalidades de inserção, atualização, exclusão e listagem dos dados de uma tabela.
+-   **Validação de Dados:** Aplicação de regras de validação para os campos do formulário.
+-   **Interface Simples:** Uso de Blade e Bootstrap para exibir os dados e facilitar a interação do usuário.
+-   **Relatórios:** Pelo menos dois relatórios que apresentem estatísticas ou agrupamentos dos dados.
+-   **Uso de Migration e Seeder:** A estrutura da tabela deve ser criada via migration, e o sistema deve conter um seeder com dados iniciais para testes.
+-   **Rotas e Controllers:** Implementação correta das rotas no `web.php` e criação do controller para manipulação dos dados.
+-   **Uso de Eloquent ORM:** Para interação com o banco de dados.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Entrega:**
+Os alunos deverão entregar o projeto compactado pelo Moodle ou por pendrive. O projeto só será considerado válido após as duplas responderem corretamente até 5 perguntas sobre o projeto desenvolvido.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### Projeto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Controle de Chamados de Suporte**
 
-## Laravel Sponsors
+-   **Tabela:** chamados
+-   **Campos:** título, descrição, solicitante, data de abertura, status
+-   **Relatórios:**
+    -   Chamados abertos por status (aberto, em andamento, resolvido)
+    -   Tempo médio de resolução de chamados
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Tecnologias
 
-### Premium Partners
+-   Laravel
+-   Docker
+-   Bootstrap
+-   Vite (NodeJs / Bunjs)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Iniciando
 
-## Contributing
+Para executar esse projeto siga as instruções abaixo:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. **Verificar PHP e Composer na máquina:**
 
-## Code of Conduct
+    - Certifique-se de que o PHP (versão 8.0 ou superior) e o Composer estão instalados.
+    - Você pode verificar a instalação do PHP com o comando:
+        ```sh
+        php -v
+        ```
+    - Você pode verificar a instalação do Composer com o comando:
+        ```sh
+        composer -v
+        ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2. **Em SO Windows, verificar se a virtualização e o WSL estão ativados:**
 
-## Security Vulnerabilities
+    - Certifique-se de que a virtualização está ativada na BIOS do seu computador.
+    - Verifique se o WSL (Windows Subsystem for Linux) está instalado e ativado.
+    - Você pode instalar o WSL com o comando:
+        ```sh
+        wsl --install
+        ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3. **Verificar Node.js ou Bun na máquina:**
 
-## License
+    - Certifique-se de que o Node.js (versão 14 ou superior) ou o Bun estão instalados.
+    - Você pode verificar a instalação do Node.js com o comando:
+        ```sh
+        node -v
+        ```
+    - Você pode verificar a instalação do Bun com o comando:
+        ```sh
+        bun -v
+        ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+4. **Instalar dependências do projeto:**
+
+    - Navegue até o diretório do projeto e instale as dependências do Composer:
+        ```sh
+        composer install
+        ```
+    - Instale as dependências do Node.js ou Bun:
+        ```sh
+        npm install
+        ```
+        ou
+        ```sh
+        bun install
+        ```
+
+5. **Configurar o ambiente:**
+
+    - Copie o arquivo [.env.example](http://_vscodecontentref_/0) para [.env](http://_vscodecontentref_/1):
+        ```sh
+        cp .env.example .env
+        ```
+    - Gere a chave da aplicação Laravel:
+        ```sh
+        php artisan key:generate
+        ```
+
+6. **Executar o Docker:**
+
+    - Certifique-se de que o Docker está instalado e em execução.
+    - Suba os containers do Docker:
+        ```sh
+        docker-compose up -d
+        ```
+
+7. **Executar as migrações e seeders:**
+
+    - Execute as migrações do banco de dados:
+        ```sh
+        php artisan migrate
+        ```
+    - Execute os seeders (se houver):
+        ```sh
+        php artisan db:seed
+        ```
+
+8. **Iniciar o servidor de desenvolvimento:**
+    - Inicie o servidor de desenvolvimento do Laravel:
+        ```sh
+        php artisan serve
+        ```
+    - Inicie o Vite para compilar os assets:
+        ```sh
+        npm run dev
+        ```
+        ou
+        ```sh
+        bun dev
+        ```
+
+Agora você deve ser capaz de acessar o projeto em seu navegador no endereço `http://localhost:8000`.
+
+### Créditos
+
+Este projeto foi desenvolvido por [Osiris Vinícius Mendes de Souza]("https://github.com/vinisjs") e [Pedro Ernesto Bernardo Esnarriaga]("https://github.com/Peddrinnz") como parte do curso de Análise de Sistemas no Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul.
