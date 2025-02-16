@@ -3,6 +3,36 @@
 @section('content')
 
 <main class="container mt-5">
+    <h2 class="text-left mb-3">Dashboard</h2>
+    <div class="card p-4 mb-4 shadow-sm">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Abertos</h5>
+                        <p class="display-6 fw-bold">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-warning">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Em andamento</h5>
+                        <p class="display-6 fw-bold">2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-success">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">Resolvidos</h5>
+                        <p class="display-6 fw-bold">1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <h2 class="text-left mb-4">Chamados</h2>
     <table class="table table-striped">
         <thead>
