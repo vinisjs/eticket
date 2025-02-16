@@ -14,15 +14,12 @@
 
             <ul class="nav flex-column mt-4">
                 <li class="nav-item">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#clienteModal">Clientes</button>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#callModal">
+                        Novo Chamado
+                    </button>
                 </li>                
                 <li class="nav-item">
                     <a class="btn" href="#">Chamados</a>
-                </li>
-                <li class="nav-item">
-                    <button type="button" data-bs-toggle="modal" class="btn" data-bs-target="#exampleModal">
-                        Relatórios
-                    </button>
                 </li>
             </ul>
 
@@ -35,8 +32,7 @@
         @yield('content')
     </main>
 
-    @include('modal.reportModal')
-    @include('modal.clientModal')
+    @include('modal.newCallModal')
     
     @vite(['resources/js/app.js'])
 </body>
