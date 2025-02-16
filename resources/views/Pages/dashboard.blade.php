@@ -1,28 +1,59 @@
-@extends('layouts.main')
+@extends('layouts.dashboard')
 
-@section('title', 'Página Inicial')
+@section('title', 'Dashboard')
 
 @section('content')
-<div class="container mt-5">
-    <h1 class="text-primary">Bootstrap instalado com sucesso! 🚀</h1>
-    <button class="btn ">Botão de teste</button>
-</div>
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar" style="width: 0%"></div>
-  </div>
-  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar" style="width: 25%"></div>
-  </div>
-  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar" style="width: 50%"></div>
-  </div>
-  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar" style="width: 75%"></div>
-  </div>
-  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar" style="width: 100%"></div>
-  </div>
-  
-  <p>seu pai</p>
+
+<main class="container mt-5">
+    <h2 class="text-left mb-4">Chamados</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Solicitante</th>
+                <th scope="col">Título</th>
+                <th scope="col">Status</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>João Silva</td>
+                <td>Erro no Sistema</td>
+                <td><span class="badge bg-warning">Em andamento</span></td>
+                <td>
+                    <button class="btn btn-sm" style="background-color: #8EC5FF;">
+                        <img src="images/eye.svg" alt="Visualizar" width="20" height="20">
+                    </button>
+                    <button class="btn btn-sm ms-2" style="background-color: #8EC5FF;">
+                        <img src="images/alert-triangle.svg" alt="Alerta" width="20" height="20">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ana Souza</td>
+                <td>Problema de login</td>
+                <td><span class="badge bg-success">Concluído</span></td>
+                <td>
+                    <button class="btn btn-primary btn-sm">Editar</button>
+                    <button class="btn btn-danger btn-sm">Excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Carlos Oliveira</td>
+                <td>Falha na impressão</td>
+                <td><span class="badge bg-danger">Pendência</span></td>
+                <td>
+                    <button class="btn btn-primary btn-sm">Editar</button>
+                    <button class="btn btn-danger btn-sm">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
 
 @endsection
