@@ -1,12 +1,9 @@
 @extends('layouts.dashboard')
-
 @section('title', 'Dashboard')
-
 @section('content')
 
 <main class="container mt-5">
     <h2 class="text-left mb-4">Chamados</h2>
-
     <table class="table table-striped">
         <thead>
             <tr>

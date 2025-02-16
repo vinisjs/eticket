@@ -1,10 +1,8 @@
 @extends('layouts.main')
-
 @section('title', 'Index')
-
 @section('content')
+
 <main>
-    
     <form class="d-flex justify-content-center align-items-center mt-5">
         <div class="card p-4 shadow-lg" style="max-width: 826px; width: 100%; max-height: 500px; height: 100%;">
             <div class="card-body mx-auto" style="max-width: 400px; width: 100%;">
