@@ -42,7 +42,18 @@ Os alunos deverão entregar o projeto compactado pelo Moodle ou por pendrive. O 
 
 Para executar esse projeto siga as instruções abaixo:
 
-1. **Verificar PHP e Composer na máquina:**
+1. **Clonar o repositório:**
+
+    - Clone o repositório do projeto para o seu ambiente local:
+        ```sh
+        git clone https://github.com/vinisjs/eticket.git
+        ```
+    - Navegue até o diretório do projeto:
+        ```sh
+        cd eticket
+        ```
+
+2. **Verificar PHP e Composer na máquina:**
 
     - Certifique-se de que o PHP (versão 8.0 ou superior) e o Composer estão instalados.
     - Você pode verificar a instalação do PHP com o comando:
@@ -54,7 +65,7 @@ Para executar esse projeto siga as instruções abaixo:
         composer -v
         ```
 
-2. **Em SO Windows, verificar se a virtualização e o WSL estão ativados:**
+3. **Em SO Windows, verificar se a virtualização e o WSL estão ativados:**
 
     - Certifique-se de que a virtualização está ativada na BIOS do seu computador.
     - Verifique se o WSL (Windows Subsystem for Linux) está instalado e ativado.
@@ -63,7 +74,7 @@ Para executar esse projeto siga as instruções abaixo:
         wsl --install
         ```
 
-3. **Verificar Node.js ou Bun na máquina:**
+4. **Verificar Node.js ou Bun na máquina:**
 
     - Certifique-se de que o Node.js (versão 14 ou superior) ou o Bun estão instalados.
     - Você pode verificar a instalação do Node.js com o comando:
@@ -75,7 +86,7 @@ Para executar esse projeto siga as instruções abaixo:
         bun -v
         ```
 
-4. **Instalar dependências do projeto:**
+5. **Instalar dependências do projeto:**
 
     - Navegue até o diretório do projeto e instale as dependências do Composer:
         ```sh
@@ -90,7 +101,7 @@ Para executar esse projeto siga as instruções abaixo:
         bun install
         ```
 
-5. **Configurar o ambiente:**
+6. **Configurar o ambiente:**
 
     - Copie o arquivo [.env.example](http://_vscodecontentref_/0) para [.env](http://_vscodecontentref_/1):
         ```sh
@@ -101,7 +112,7 @@ Para executar esse projeto siga as instruções abaixo:
         php artisan key:generate
         ```
 
-6. **Executar o Docker:**
+7. **Executar o Docker:**
 
     - Certifique-se de que o Docker está instalado e em execução.
     - Suba os containers do Docker:
@@ -109,7 +120,7 @@ Para executar esse projeto siga as instruções abaixo:
         docker-compose up -d
         ```
 
-7. **Executar as migrações e seeders:**
+8. **Executar as migrações e seeders:**
 
     - Execute as migrações do banco de dados:
         ```sh
@@ -120,7 +131,7 @@ Para executar esse projeto siga as instruções abaixo:
         php artisan db:seed
         ```
 
-8. **Iniciar o servidor de desenvolvimento:**
+9. **Iniciar o servidor de desenvolvimento:**
     - Inicie o servidor de desenvolvimento do Laravel:
         ```sh
         php artisan serve
@@ -138,4 +149,4 @@ Agora você deve ser capaz de acessar o projeto em seu navegador no endereço `h
 
 ### Créditos
 
-Este projeto foi desenvolvido por [Osiris Vinícius Mendes de Souza]("https://github.com/vinisjs") e [Pedro Ernesto Bernardo Esnarriaga]("https://github.com/Peddrinnz") como parte do curso de Análise de Sistemas no Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul.
+Este projeto foi desenvolvido por [Osiris Vinícius Mendes de Souza](https://github.com/vinisjs) e [Pedro Ernesto Bernardo Esnarriaga](https://github.com/Peddrinnz) como parte do curso de Análise de Sistemas no Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul.
