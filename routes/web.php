@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\CallController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TicketController;
+use App\Http\Controllers\ReportController;
 
 Route::get('/', function () {
-    return view('index');
-});
+    return view('home');
+})->name('home');
 
-Route::resource('calls', CallController::class);
-
-Route::get('/reports', [CallController::class, 'reports'])->name('reports');
+Route::resource('tickets', TicketController::class);
+Route::get('/reports', [ReportController::class, 'index'])->name('reports');

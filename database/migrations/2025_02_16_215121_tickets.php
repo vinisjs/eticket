@@ -6,21 +6,20 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up(): void
+    public function up()
     {
-        Schema::create('calls', function (Blueprint $table) {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->text('description');
             $table->string('requester');
-            $table->date('date_opened');
-            $table->enum('status', ['open', 'in_progress', 'closed'])->default('open');
+            $table->enum('status', ['open', 'in_progress', 'resolved'])->default('open');
             $table->timestamps();
         });
     }
 
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('calls');
+        Schema::dropIfExists('tickets');
     }
 };
