@@ -28,8 +28,8 @@
                             </div>
                         </div>
                         <div class="d-grid gap-2">
-                            <button class="btn text-white" style="background-color: #8EC5FF">Entrar</button>
-                            <button class="btn text-white" style="background-color: #8EC5FF">Sou usuário de Laravel</button>
+                            <button class="btn" style="background-color: #8EC5FF">Entrar</button>
+                            <button class="btn" style="background-color: #8EC5FF">Sou usuário de Laravel</button>
                         </div>
                     </div>
                 </div>

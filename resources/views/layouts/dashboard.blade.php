@@ -11,7 +11,6 @@
     </style>
 </head>
 <body class="d-flex flex-column flex-md-row vh-100">
-    <!-- Barra Lateral -->
     <nav id="sidebar" class="col-md-3 col-lg-2 bg-light sidebar p-3 d-flex flex-column vh-100 justify-content-center">
         <div class="text-center mb-4">
             <h3 class="m-0">Sistema de Chamados</h3>
@@ -32,7 +31,6 @@
         </div>
     </nav>
 
-    <!-- Conteúdo Principal -->
     <main class="flex-grow-1 p-4 overflow-auto">
         @yield('content')
     </main>
