@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="mb-4">Relatórios</h1>
+<h1 class="mb-4">Reports</h1>
 
 <div class="row">
     <div class="col-md-6">
         <div class="card mb-4">
             <div class="card-header">
-                <h5 class="card-title">Chamados por Status</h5>
+                <h5 class="card-title">Tickets by Status</h5>
             </div>
             <div class="card-body">
                 <canvas id="ticketsByStatusChart"></canvas>
@@ -17,12 +17,14 @@
     <div class="col-md-6">
         <div class="card mb-4">
             <div class="card-header">
-                <h5 class="card-title">Tempo Médio de Resolução</h5>
+                <h5 class="card-title">Average Resolution Time</h5>
             </div>
             <div class="card-body">
                 <p class="display-4 text-center">
-                    @if(is_numeric($averageResolutionTime))
-                        {{ number_format($averageResolutionTime, 1) }} days
+                    @if($formattedTime['days'] > 0 || $formattedTime['hours'] > 0 || $formattedTime['minutes'] > 0)
+                        {{ $formattedTime['days'] }} days,<br>
+                        {{ $formattedTime['hours'] }} hours,<br>
+                        {{ $formattedTime['minutes'] }} minutes
                     @else
                         N/A
                     @endif

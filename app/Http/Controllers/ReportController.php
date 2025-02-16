@@ -16,10 +16,21 @@ class ReportController extends Controller
 
         $averageResolutionTime = Ticket::where('status', 'resolved')
             ->whereNotNull('updated_at')
-            ->avg(DB::raw('TIMESTAMPDIFF(DAY, created_at, updated_at)'));
+            ->select(DB::raw('AVG(TIMESTAMPDIFF(MINUTE, created_at, updated_at)) as avg_minutes'))
+            ->first();
 
-        $averageResolutionTime = $averageResolutionTime ?: 0;
+        $avgMinutes = $averageResolutionTime->avg_minutes ?? 0;
 
-        return view('reports', compact('ticketsByStatus', 'averageResolutionTime'));
+        $days = floor($avgMinutes / 1440);
+        $hours = floor(($avgMinutes % 1440) / 60);
+        $minutes = $avgMinutes % 60;
+
+        $formattedTime = [
+            'days' => $days,
+            'hours' => $hours,
+            'minutes' => round($minutes)
+        ];
+
+        return view('reports', compact('ticketsByStatus', 'formattedTime'));
     }
 }
