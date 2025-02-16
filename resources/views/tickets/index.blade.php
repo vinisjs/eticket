@@ -2,7 +2,7 @@
 
 @section('content')
 <h1 class="mb-4">Lista de Chamados</h1>
-<a href="{{ route('tickets.create') }}" class="btn btn-primary mb-3">Novo Chamado</a>
+<a href="{{ route('tickets.create') }}" class="btn mb-3" style="background:#8EC5FF">Novo Chamado</a>
 
 @if (session('success'))
     <div class="alert alert-success">

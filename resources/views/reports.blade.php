@@ -7,7 +7,7 @@
     <div class="col-md-6">
         <div class="card mb-4">
             <div class="card-header">
-                <h5 class="card-title">Tickets by Status</h5>
+                <h5 class="card-title">Chamados por Status</h5>
             </div>
             <div class="card-body">
                 <canvas id="ticketsByStatusChart"></canvas>
@@ -17,16 +17,16 @@
     <div class="col-md-6">
         <div class="card mb-4">
             <div class="card-header">
-                <h5 class="card-title">Average Resolution Time</h5>
+                <h5 class="card-title">Tempo médio de respostas</h5>
             </div>
             <div class="card-body">
-                <p class="display-4 text-center">
+                <p class="display-2 text-center">
                     @if($formattedTime['days'] > 0 || $formattedTime['hours'] > 0 || $formattedTime['minutes'] > 0)
-                        {{ $formattedTime['days'] }} days,<br>
-                        {{ $formattedTime['hours'] }} hours,<br>
-                        {{ $formattedTime['minutes'] }} minutes
+                    <p>{{ $formattedTime['days'] }} days</p>
+                    <p>{{ $formattedTime['hours'] }} hours</p>
+                    <p>{{ $formattedTime['minutes'] }} minutes</p>
                     @else
-                        N/A
+                       <h2> N/A </h2>
                     @endif
                 </p>
             </div>

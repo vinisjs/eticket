@@ -9,8 +9,8 @@
                 <h5 class="card-title">Ações Rápidas</h5>
             </div>
             <div class="card-body">
-                <a href="{{ route('tickets.create') }}" class="btn btn-primary btn-block mb-2">Criar Novo Chamado</a>
-                <a href="{{ route('tickets.index') }}" class="btn btn-outline-secondary btn-block mb-2">Ver todos os Chamados</a>
+                <a href="{{ route('tickets.create') }}" class="btn btn-block" style="background:#8EC5FF">Criar Novo Chamado</a>
+                <a href="{{ route('tickets.index') }}" class="btn btn-outline-secondary btn-block">Ver todos os Chamados</a>
                 <a href="{{ route('reports') }}" class="btn btn-outline-secondary btn-block">Ver Relatórios</a>
             </div>
         </div>
