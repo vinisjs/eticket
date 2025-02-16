@@ -9,18 +9,20 @@
     <nav class="bg-light p-3 d-flex flex-column justify-content-between vh-100 position-fixed position-md-static"
          style="width: 200px;">
             <header>
-                <h2 class="m-0">Sistema de Chamados</h2>
+                <h3 class="m-0">Sistema de Chamados</h3>
             </header>
 
             <ul class="nav flex-column mt-4">
                 <li class="nav-item">
-                    <a class="btn" href="#">Clientes</a>
-                </li>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#clienteModal">Clientes</button>
+                </li>                
                 <li class="nav-item">
                     <a class="btn" href="#">Chamados</a>
                 </li>
                 <li class="nav-item">
-                    <x-report-cards />
+                    <button type="button" data-bs-toggle="modal" class="btn" data-bs-target="#exampleModal">
+                        Relatórios
+                    </button>
                 </li>
             </ul>
 
@@ -33,7 +35,8 @@
         @yield('content')
     </main>
 
+    @include('modal.modal')
+    
     @vite(['resources/js/app.js'])
-
 </body>
 </html>
