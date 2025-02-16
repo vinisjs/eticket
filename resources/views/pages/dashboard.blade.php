@@ -65,8 +65,12 @@
                 <td>Problema de login</td>
                 <td><span class="badge bg-success">Concluído</span></td>
                 <td>
-                    <button class="btn btn-primary btn-sm">Editar</button>
-                    <button class="btn btn-danger btn-sm">Excluir</button>
+                    <button class="btn btn-sm" style="background-color: #8EC5FF;">
+                        <img src="images/eye.svg" alt="Visualizar" width="20" height="20">
+                    </button>
+                    <button class="btn btn-sm ms-2" style="background-color: #8EC5FF;">
+                        <img src="images/alert-triangle.svg" alt="Alerta" width="20" height="20">
+                    </button>
                 </td>
             </tr>
             <tr>
@@ -75,8 +79,12 @@
                 <td>Falha na impressão</td>
                 <td><span class="badge bg-danger">Pendência</span></td>
                 <td>
-                    <button class="btn btn-primary btn-sm">Editar</button>
-                    <button class="btn btn-danger btn-sm">Excluir</button>
+                    <button class="btn btn-sm" style="background-color: #8EC5FF;">
+                        <img src="images/eye.svg" alt="Visualizar" width="20" height="20">
+                    </button>
+                    <button class="btn btn-sm ms-2" style="background-color: #8EC5FF;">
+                        <img src="images/alert-triangle.svg" alt="Alerta" width="20" height="20">
+                    </button>
                 </td>
             </tr>
         </tbody>
