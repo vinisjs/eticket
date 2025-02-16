@@ -34,8 +34,7 @@
         @yield('content')
     </main>
 
-    @include('modal.reportModal')
-    @include('modal.clientModal')
+    @include('modal.newCallModal')
 
     @vite(['resources/js/app.js'])
 </body>
