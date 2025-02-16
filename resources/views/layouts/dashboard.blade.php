@@ -7,15 +7,15 @@
     <title>@yield('title', 'Meu Site')</title>
     
 </head>
-<body style="background-color: #FAFAFA; display: grid; grid-template-columns: 200px 1fr;">
-    <div style="height: 100vh; display: grid; justify-content: space-between">
-        <nav class="bg-light p-3" style="width: 200px; height: 100%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+<body class="d-flex flex-column flex-md-row vh-100">
+    <nav class="bg-light p-3 d-flex flex-column justify-content-between vh-100 position-fixed position-md-static"
+         style="width: 200px;">
             <header>
                 <h2 class="m-0">Sistema de Chamados</h2>
             </header>
 
             <ul class="nav flex-column mt-4">
-                <li class="nav-item" style="margin-top: 300px">
+                <li class="nav-item">
                     <a class="btn" href="#">Clientes</a>
                 </li>
                 <li class="nav-item">
@@ -26,13 +26,13 @@
                 </li>
             </ul>
 
-            <div style="margin-top: 300px">
+            <div>
                 <button class="btn w-100" style="background-color: #8EC5FF;">Sair</button>
             </div>
         </nav>
     </div>
     
-    <main class="">
+    <main class="flex-grow-1 p-4 overflow-auto" style="margin-left: 200px;">
         @yield('content')
     </main>
     
