@@ -2,7 +2,7 @@
 @section('title', 'Dashboard')
 @section('content')
 
-<main class="container mt-5">
+<main class="container-fluid mt-5">
     <h2 class="text-left mb-3">Dashboard</h2>
     <div class="card p-4 mb-4 shadow-sm">
         <div class="row text-center">
