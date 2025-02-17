@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="mb-4">Chamados Dashboard</h1>
-<div class="row">
+<div class="d-flex justify-content-center align-items-center" ">
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
