@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="mb-4">Reports</h1>
+<h1 class="mb-4">Relatórios</h1>
 
 <div class="row">
     <div class="col-md-6">

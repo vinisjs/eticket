@@ -53,13 +53,13 @@ class TicketController extends Controller
 
         $ticket->update($validatedData);
 
-        return redirect()->route('tickets.index')->with('success', 'Ticket updated successfully.');
+        return redirect()->route('tickets.index')->with('success', 'Chamado atualizado com sucesso.');
     }
 
     public function destroy(Ticket $ticket)
     {
         $ticket->delete();
 
-        return redirect()->route('tickets.index')->with('success', 'Ticket deleted successfully.');
+        return redirect()->route('tickets.index')->with('success', 'Chamado deletado com sucesso.');
     }
 }

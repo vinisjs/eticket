@@ -36,7 +36,7 @@
             <option value="resolved" {{ $ticket->status == 'resolved' ? 'selected' : '' }}>Resolvido</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Atualizar Chamado</button>
+    <button type="submit" class="btn btn-outline-secondary" style="background:#8EC5FF">Atualizar Chamado</button>
 </form>
 @endsection
 

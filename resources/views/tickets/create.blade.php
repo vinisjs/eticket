@@ -35,7 +35,7 @@
             <option value="resolved">Resolvido</option>
         </select>
     </div>
-    <button type="submit" class="btn " style="background:#8EC5FF">Criar Chamado</button>
+    <button type="submit" class="btn btn-outline-secondary" style="background:#8EC5FF">Criar Chamado</button>
 </form>
 @endsection
 
