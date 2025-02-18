@@ -20,11 +20,13 @@ class ReportController extends Controller
             ->first();
 
         $avgMinutes = $averageResolutionTime->avg_minutes ?? 0;
-
+        // print_r($avgMinutes);
         $days = floor($avgMinutes / 1440);
         $hours = floor(($avgMinutes % 1440) / 60);
         $minutes = $avgMinutes % 60;
-
+        // print_r($days);
+        // print_r($hours);
+        // print_r($minutes);
         $formattedTime = [
             'days' => $days,
             'hours' => $hours,
