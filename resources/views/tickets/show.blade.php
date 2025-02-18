@@ -8,9 +8,9 @@
         <h5 class="card-title">{{ $ticket->title }}</h5>
     </div>
     <div class="card-body">
-        <p><strong>Description:</strong> {{ $ticket->description }}</p>
-        <p><strong>Requester:</strong> {{ $ticket->requester }}</p>
-        <p><strong>Created At:</strong> {{ $ticket->created_at->format('Y-m-d H:i:s') }}</p>
+        <p><strong>Descrição:</strong> {{ $ticket->description }}</p>
+        <p><strong>Solicitante:</strong> {{ $ticket->requester }}</p>
+        <p><strong>Criado em:</strong> {{ $ticket->created_at->format('Y-m-d H:i:s') }}</p>
         <p><strong>Status:</strong> {{ ucfirst(str_replace('_', ' ', $ticket->status)) }}</p>
     </div>
 </div>

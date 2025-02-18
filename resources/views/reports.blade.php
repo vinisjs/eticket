@@ -42,7 +42,7 @@
         data: {
             labels: {!! json_encode($ticketsByStatus->pluck('status')) !!},
             datasets: [{
-                label: 'Number of Tickets',
+                label: 'Numero de chamados',
                 data: {!! json_encode($ticketsByStatus->pluck('count')) !!},
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
